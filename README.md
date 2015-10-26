@@ -1,1 +1,4 @@
-# project_c_bsq
+# README #
+
+Project : BSQ  
+Status  : Finished
