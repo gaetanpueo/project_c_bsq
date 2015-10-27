@@ -8,6 +8,8 @@ Must contain [libft](https://github.com/gaetanpueo/project_c_libft) in the folde
 # TRY IT #
 
 ```
-$ make
+$ make  
 $ perl plateau_generator.pl 200 100 4 | ./bin/bsq
+-- or --
+$ ./bin/bsq test/grids/large.grid
 ```
