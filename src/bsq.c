@@ -48,7 +48,7 @@ int		isvalidgrid(t_grid board)
 {
 	if (board.width == 0 || board.height == 0)
 		return (0);
-	if (ft_count_char(board.content, '\n') != board.height + 1)
+	if (ft_count_char(board.content, '\n') != (size_t)board.height + 1)
 		return (0);
 	if (!checkvalidchars(board))
 		return (0);
