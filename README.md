@@ -7,5 +7,7 @@ Must contain [libft](https://github.com/gaetanpueo/project_c_libft) in the folde
 
 # TRY IT #
 
-- `make`
-- `perl plateau_generator.pl 200 100 4 | ./bin/bsq`
+```
+make
+perl plateau_generator.pl 200 100 4 | ./bin/bsq
+```
