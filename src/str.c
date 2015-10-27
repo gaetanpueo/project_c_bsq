@@ -12,17 +12,7 @@
 
 #include <bsq.h>
 
-int		ft_strlen(char *str)
-{
-	int		i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strcat(char *strd, char *stra, int olds, int adds)
+char	*ft_strcat_s(char *strd, char *stra, int olds, int adds)
 {
 	int		i;
 	int		j;
@@ -49,27 +39,6 @@ char	*ft_strcat(char *strd, char *stra, int olds, int adds)
 	return (str_new);
 }
 
-int		ft_atoi(char *str)
-{
-	int		result;
-	int		sign;
-
-	result = 0;
-	sign = 1;
-	while (*str == ' ')
-		str++;
-	if (*str == '-')
-		sign = -sign;
-	while (*str >= '0' && *str <= '9')
-	{
-		result = (result * 10) + (*str - '0');
-		str++;
-	}
-	if (sign == -1)
-		result = -result;
-	return (result);
-}
-
 char	*file_to_str(int fd)
 {
 	char	buf[BUFFER_SIZE + 1];
@@ -83,25 +52,7 @@ char	*file_to_str(int fd)
 	while ((ret = read(fd, buf, BUFFER_SIZE)))
 	{
 		buf[ret] = 0;
-		str = ft_strcat(str, buf, ft_strlen(str), ft_strlen(buf));
+		str = ft_strcat_s(str, buf, ft_strlen(str), ft_strlen(buf));
 	}
 	return (str);
-}
-
-int		countchar(char *str, char token)
-{
-	int		i;
-	int		count;
-	int		len;
-
-	i = 0;
-	count = 0;
-	len = ft_strlen(str);
-	while (i < len)
-	{
-		if (str[i] == token)
-			count++;
-		i++;
-	}
-	return (count);
 }

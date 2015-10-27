@@ -13,10 +13,7 @@
 #ifndef BSQ_H
 # define BSQ_H
 
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdio.h>
-# include <stdlib.h>
+# include <libft.h>
 
 # define BUFFER_SIZE 5000000
 
@@ -40,16 +37,13 @@ int				isvalidgrid(t_grid board);
 void			processfile(int file_desc);
 
 char			*sub_str(char *str, int start, int end);
-int				ft_strlen(char *str);
-char			*ft_strcat(char *strd, char *stra, int olds, int adds);
+char			*ft_strcat_s(char *strd, char *stra, int olds, int adds);
 
 char			*file_to_str(int fd);
-int				ft_atoi(char *str);
 int				indexof(char *str, char tofind, int start);
 int				nindexof(char *str, char tofind, int hit);
 int				ft_min(int a, int b);
 int				ft_min2(int a, int b, int c);
-int				countchar(char *str, char token);
 
 int				lineindex(int linenumber, t_grid board);
 int				indexat(int x, int y, t_grid board);
